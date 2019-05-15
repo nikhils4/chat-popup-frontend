@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body >
+
+    <div class="chat-opener" id="sse" style="border : 2px solid black" >
+
+    </div>
+
+        <!-- chat window for email input  -->
+        
+    <div class="container-fluid chat-window" style="height : 310px; overflow-y: hidden" >
+
+        <!-- chat top container -->
+
+        <div class="row fixed">
+            <div class="col-10 chat-window-top-left" style="background-color: black">
+                <div class="avatar">
+                </div>
+                <div class="avatar-name">
+                    <p>
+                        Organisation
+                    </p>
+                </div>
+            </div>
+            <div class="col-2 chat-window-top-right" style="background-color: black" >
+                <div class="cross" >
+                    <svg  width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M9.502 8.5l7.29 7.29c.277.278.277.727 0 1.003-.137.138-.32.207-.5.207s-.362-.07-.5-.207L8.5 9.503l-7.29 7.29c-.14.138-.32.207-.5.207-.183 0-.364-.07-.502-.207-.277-.276-.277-.725 0-1.002l7.29-7.29-7.29-7.29C-.07.932-.07.483.208.206c.277-.276.725-.276 1 0L8.5 7.497l7.29-7.29c.277-.276.725-.276 1.002 0 .277.277.277.726 0 1.002L9.502 8.5z" fill-rule="evenodd"></path></svg>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- chat middle row for messages -->
+
+        <div class="row">
+            <div class=" col-12 chat-msg" style="height : 150px">
+                <div class="rec-box">
+                    <div class="rec-cover">
+                        <div >
+                            Hey, there 
+                        </div>
+                    </div>
+                </div>
+                <div class="rec-box">
+                    <div class="rec-cover">
+                        <div >
+                            Please enter your email id to proceed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chat bottom part for replying -->
+
+        <div class="row" >
+            <div class="col-12 chat-input" style="padding:0">
+                <div class="reply">
+                    Reply to Org
+                </div>
+                <div>
+                    <input type="text" class="chat-content" placeholder="Reply to Org">
+                    <button class="chat-send" type="submit" >
+                        <img src="https://img.icons8.com/color/48/000000/filled-sent.png" id="send-email" style="height : 20px; width : auto; background : transparent;">
+                    </button>
+                </div>
+                <div class="content">
+                    <p>Copyright</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- chat window for main chat and established connection  -->
+
+
+    <div class="container-fluid chat-window" style="display : none; overflow-y: hidden">
+
+        <!-- chat top container -->
+
+        <div class="row fixed">
+            <div class="col-10 chat-window-top-left" style="background-color: black">
+                <div class="avatar">
+                </div>
+                <div class="avatar-name">
+                    <p>
+                        Organisation
+                    </p>
+                </div>
+            </div>
+            <div class="col-2 chat-window-top-right" style="background-color: black" onclick="close()">
+                <div class="cross" >
+                    <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M9.502 8.5l7.29 7.29c.277.278.277.727 0 1.003-.137.138-.32.207-.5.207s-.362-.07-.5-.207L8.5 9.503l-7.29 7.29c-.14.138-.32.207-.5.207-.183 0-.364-.07-.502-.207-.277-.276-.277-.725 0-1.002l7.29-7.29-7.29-7.29C-.07.932-.07.483.208.206c.277-.276.725-.276 1 0L8.5 7.497l7.29-7.29c.277-.276.725-.276 1.002 0 .277.277.277.726 0 1.002L9.502 8.5z" fill-rule="evenodd"></path></svg>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- chat middle row for messages -->
+
+        <div class="row">
+            <div class=" col-12 chat-msg">
+
+            </div>
+        </div>
+
+        <!-- chat bottom part for replying -->
+
+        <div class="row" >
+            <div class="col-12 chat-input" style="padding:0">
+                <div class="reply">
+                    Reply to Org
+                </div>
+                <div>
+                    <input type="text" class="chat-content" placeholder="Reply to Org">
+                    <button class="chat-send" type="submit" >
+                        <img src="https://img.icons8.com/color/48/000000/filled-sent.png" style="height : 20px; width : auto; background : transparent;">
+                    </button>
+                </div>
+                <div class="content">
+                    <p>Copyright</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
